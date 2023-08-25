@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  bank-rega-java-container:
+    image: bank-rega-java:1.0
+    ports:
+      - "3000:3000"
+    environment:
+      - SERVER_PORT=3000
+      - SPRING_DATASOURCE_URL=jdbc:oracle:thin:@host.docker.internal:1521/xe
+      - SPRING_DATASOURCE_USERNAME=system
+      - SPRING_DATASOURCE_PASSWORD=1234
+      - SPRING_DATASOURCE_DRIVER-CLASS-NAME=oracle.jdbc.OracleDriver
+      - SPRING_JPA_HIBERNATE_DDL-AUTO=update
+      - SPRING_JPA_SHOW-SQL=true
