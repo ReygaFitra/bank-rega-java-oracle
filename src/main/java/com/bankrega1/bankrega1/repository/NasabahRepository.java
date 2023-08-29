@@ -6,7 +6,7 @@ import com.bankrega1.bankrega1.model.Nasabah;
 
 import jakarta.transaction.Transactional;
 
-public interface NasabahRepository extends JpaRepository<Nasabah, Long> {
+public interface NasabahRepository extends JpaRepository<Nasabah, String> {
     
     Nasabah findOneByNomorKtp(String nomorKtp);
 
